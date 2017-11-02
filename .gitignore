@@ -1,0 +1,10 @@
+.idea/
+.project
+.settings
+node_modules/
+*~
+*.diff
+*.patch
+/*.html
+.DS_Store
+package-lock
