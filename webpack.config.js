@@ -9,8 +9,8 @@ module.exports = {
     },
     output:{
         filename:'bundle.js',
-        path:path.join(__dirname,'dist'),
-		libraryTarget: "amd",
+        path:path.join(__dirname,'dist')
+		//libraryTarget: "commonjs",
     },
     plugins:[
         new webpack.HotModuleReplacementPlugin()
