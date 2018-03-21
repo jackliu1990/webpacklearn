@@ -5,16 +5,23 @@ var webpack = require('webpack')
 var path =require('path')
 module.exports = {
     entry:{
-        app:path.join(__dirname,'src','index.js')
+        tsgis2d: './app/scripts/tsgis/index2d.js',
+        tsgis3d: './app/scripts/tsgis/index3d.js',
+        tsgis: './app/scripts/tsgis/index.js'
     },
     output:{
-        filename:'bundle.js',
-        path:path.join(__dirname,'dist')
-		//libraryTarget: "commonjs",
+        filename: '[name].js',
+        path:path.join(__dirname,'dist'),
+		libraryTarget: "umd"
     },
     plugins:[
         new webpack.HotModuleReplacementPlugin()
     ],
+    externals:{
+        "jquery": "jQuery",
+        "ol":"ol",
+        "Cesium":"Cesium"
+    },
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         port:8089,

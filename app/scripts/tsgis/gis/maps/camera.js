@@ -1,39 +1,8 @@
-define(['defineProperties'], function (defineProperties) {
-    /**
-     * @class
-     * @classdesc
-     * 相机接口
-     * @alias g2.maps.ICamera
-     * @returns {g2.maps.ICamera} 返回相机接口
-     */
+define([], function () {
+
     var camera = function (options) {
     }
-    defineProperties(camera.prototype,{
-        position:{
-            get:function(){
-            },
-            set:function(value){
-            }
-        },
-        heading:{
-            get:function(){
-            },
-            set:function(value){
-            }
-        },
-        pitch:{
-            get:function(){
-            },
-            set:function(value){
-            }
-        },
-        roll:{
-            get:function(){
-            },
-            set:function(value){
-            }
-        }
-    })
+
     camera.prototype.flyTo = function (destination, heading, pitch, roll) {
     }
     camera.prototype.lookAt = function (position, heading, pitch, roll) {
